@@ -1,0 +1,23 @@
+<!-- Extend the JavaScript code below to interact with the displayed HTML elements.
+Enter a new todo in the input field. Once you click the button, the new todo item should appear at the bottom of the list.
+Confirm your code by creating a new todo! -->
+
+<input type="text" id="input" placeholder="To do..." />
+<button type="button" id="button">Add</button>
+<ul id="list">
+    <li>Read a book</li>
+    <li>Lunch with Caro</li>
+    <li>Feed the dog</li>
+</ul>
+
+<script>
+    const button = document.getElementById('button');
+    button.addEventListener('click', () => {
+        // type in your code here
+        const ul = document.querySelector('#list');
+        const input = document.querySelector('#input');
+        const li = document.createElement('li');
+        li.append(input.value);
+        ul.append(li);
+    });
+</script>
